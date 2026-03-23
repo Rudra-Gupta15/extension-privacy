@@ -7,6 +7,7 @@ Privacy policies for my Chrome extensions, hosted via GitHub Pages.
 ## BalanceTab — Gamer + Office
 
 **Privacy Policy URL** (paste this in Chrome Web Store):
+**privacy_policy.md**
 ```
 https://rudra-gupta15.github.io/extension-privacy/privacy_policy
 ```
@@ -16,6 +17,7 @@ https://rudra-gupta15.github.io/extension-privacy/privacy_policy
 ## TimeMark for YouTube
 
 **Privacy Policy URL** (paste this in Chrome Web Store):
+**privacy.html**
 ```
 https://rudra-gupta15.github.io/extension-privacy/privacy
 ```
