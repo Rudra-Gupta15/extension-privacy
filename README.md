@@ -11,6 +11,9 @@ Privacy policies for my Chrome extensions, hosted via GitHub Pages.
 ```
 https://rudra-gupta15.github.io/extension-privacy/privacy_policy
 ```
+```
+https://rudra-gupta15.github.io/extension-privacy/privacy_policy_balancetab
+```
 
 ---
 
