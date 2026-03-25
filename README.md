@@ -14,6 +14,9 @@ https://rudra-gupta15.github.io/extension-privacy/privacy_policy
 ```
 https://rudra-gupta15.github.io/extension-privacy/privacy_policy_balancetab
 ```
+```
+https://rudra-gupta15.github.io/extension-privacy/how_to_use_1
+```
 
 ---
 
