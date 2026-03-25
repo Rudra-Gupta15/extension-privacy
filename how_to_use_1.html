@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalanceTab — User Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000;
+            --card: rgba(18, 18, 18, 0.9);
+            --accent: #d4c4a1;
+            --beige-light: #f5f5dc;
+            --beige-mute: #8e806a;
+            --text: #ffffff;
+            --text-dim: #b5a48b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 60px 20px;
+            background-image: 
+                radial-gradient(circle at 50% 0%, #1a1814 0%, #000 100%),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4c4a1' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 2.8rem; letter-spacing: 5px; color: #fff; margin-bottom: 10px; text-shadow: 0 0 25px rgba(5, 217, 232, 0.6); }
+        .subtitle { color: var(--accent); font-weight: 600; letter-spacing: 3px; text-transform: uppercase; font-size: 0.9rem; opacity: 0.8; }
+        
+        section { margin-bottom: 50px; padding: 40px; background: var(--card); border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(12px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        h2 { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-bottom: 25px; color: var(--accent); display:flex; align-items:center; gap:15px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .feature-card { padding: 25px; background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px solid rgba(255,255,255,0.04); transition: 0.3s; }
+        .feature-card:hover { background: rgba(255,255,255,0.05); transform: translateY(-5px); }
+        .feature-card h3 { font-size: 1.1rem; margin-bottom: 12px; color: #fff; display: flex; align-items: center; gap: 8px; }
+        .feature-card p { font-size: 0.9rem; color: var(--text-dim); }
+
+        .key-list { list-style: none; }
+        .key-item { display:flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .key-item:last-child { border-bottom: none; }
+        .k-tag { background: rgba(5, 217, 232, 0.08); color: var(--accent); padding: 6px 14px; border-radius: 8px; font-weight: 700; font-family: 'Orbitron', sans-serif; font-size: 0.75rem; border: 1px solid rgba(5, 217, 232, 0.2); min-width: 100px; text-align: center; }
+
+        .game-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; }
+        .game-item { padding: 20px; background: rgba(255,255,255,0.02); border-left: 4px solid var(--accent); border-radius: 8px; }
+        .game-name { font-weight: 700; color: #fff; margin-bottom: 8px; font-size: 1rem; }
+        .game-ctrl { font-size: 0.8rem; color: var(--accent); font-family: 'Orbitron', sans-serif; opacity: 0.8; }
+
+        footer { text-align: center; margin-top: 80px; color: var(--text-dim); font-size: 0.85rem; padding-bottom: 40px; }
+        .cta-container { text-align: center; margin-top: 20px; }
+        .back-link { display: inline-block; color: var(--accent); text-decoration: none; font-weight: 700; font-family: 'Orbitron', sans-serif; font-size: 0.8rem; letter-spacing: 2px; border: 2px solid var(--accent); padding: 14px 40px; border-radius: 40px; transition: 0.4s; text-transform: uppercase; }
+        .back-link:hover { background: var(--accent); color: #000; box-shadow: 0 0 40px rgba(212, 196, 161, 0.4); transform: scale(1.05); }
+        
+        strong { color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="color: var(--accent); font-size: 3rem; letter-spacing: 12px; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid rgba(212, 196, 161, 0.15); padding-bottom: 15px; display: inline-block;">BALANCE TAB</h1>
+            <p class="subtitle" style="margin-top: 20px; color: var(--beige-mute); letter-spacing: 4px;">Ultimate User Manual</p>
+        </header>
+
+        <section id="overview">
+            <h2><span>🚀</span> Productivity Dashboard</h2>
+            <div class="grid">
+                <div class="feature-card">
+                    <h3><span>🕒</span> Smart Clock</h3>
+                    <p>Includes high-precision time tracking (12h/24h), Day of the Year, and ISO Week counters for peak planning.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span>⛅</span> Weather Sync</h3>
+                    <p>Automatically detects your location and provides real-time temperatures. Toggle between Celsius and Fahrenheit in Settings.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span>📝</span> AI Notebook</h3>
+                    <p>A distraction-free zone for your thoughts. Auto-saves every keystroke securely in your browser's local storage.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span>📂</span> Recent Tabs</h3>
+                    <p>Quickly access your last 10 closed sessions. Use the <strong>+ Reopen</strong> button to recover a closed tab instantly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="customization">
+            <h2><span>🎨</span> Personalization Engine</h2>
+            <p style="margin-bottom:30px; color:var(--text-dim);">Access <strong>Settings (⚙️ Gear Icon)</strong> or use <strong>Alt + S</strong> to configure your experience.</p>
+            <div class="grid">
+                <div class="feature-card">
+                    <h3>Live Wallpapers</h3>
+                    <p>Transform your tab into a living space. <strong>Video wallpapers</strong> (MP4/WebM) provide smooth, hypnotic loops.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Global Themes</h3>
+                    <p>Switch between **Dark**, **Light**, and **Grey** modes. You can even customize the transparency of the dashboard widgets.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Personal Logo</h3>
+                    <p>Upload a custom logo or change the branding text to your name or favorite mantra.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="arcade">
+            <h2><span>🎮</span> Instant Arcade Panel</h2>
+            <div class="game-grid">
+                <div class="game-item">
+                    <div class="game-name">Dash Racer 2D</div>
+                    <div class="game-ctrl">Arrows to Dash</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">Space Shooter</div>
+                    <div class="game-ctrl">Left/Right + Space</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">Block Drop</div>
+                    <div class="game-ctrl">Arrows + R (Rotate)</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">Snake Neon</div>
+                    <div class="game-ctrl">Arrow Keys</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">Cyber Pong</div>
+                    <div class="game-ctrl">W / S Keys</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">2048</div>
+                    <div class="game-ctrl">Slide Arrows</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">Flap Dash</div>
+                    <div class="game-ctrl">Space / Up</div>
+                </div>
+                <div class="game-item">
+                    <div class="game-name">Breakout</div>
+                    <div class="game-ctrl">Mouse / Arrows</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shortcuts">
+            <h2><span>⌨️</span> Power-User Shortcuts</h2>
+            <div class="key-list">
+                <div class="key-item">
+                    <span>Quick Search Focus</span>
+                    <span class="k-tag">Alt + Space</span>
+                </div>
+                <div class="key-item">
+                    <span>Open / Close Settings</span>
+                    <span class="k-tag">Alt + S</span>
+                </div>
+                <div class="key-item">
+                    <span>Activate Notebook</span>
+                    <span class="k-tag">Alt + N</span>
+                </div>
+                <div class="key-item">
+                    <span>Trigger AI Assistant</span>
+                    <span class="k-tag">Alt + A</span>
+                </div>
+                <div class="key-item">
+                    <span>Enter Arcade / Restart</span>
+                    <span class="k-tag">Alt + G</span>
+                </div>
+                <div class="key-item">
+                    <span>Safety Close All</span>
+                    <span class="k-tag">Esc</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-container">
+            <a href="newtab.html" class="back-link">LAUNCH DASHBOARD</a>
+            <br>
+            <a href="javascript:window.close();" style="display:inline-block; margin-top:20px; color:var(--text-dim); text-decoration:none; font-size:0.7rem; font-family:'Orbitron',sans-serif; letter-spacing:1px; opacity:0.6;">CLOSE THIS TAB</a>
+        </div>
+
+        <footer>
+            BalanceTab — Minimal. Powerful. Private.<br>
+            All data is stored locally in your browser. No accounts or tracking.
+        </footer>
+    </div>
+</body>
+</html>
