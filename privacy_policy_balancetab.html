@@ -100,13 +100,14 @@
         <p>The <strong>BalanceTab — Gamer + Office</strong> extension is designed with privacy as a core principle. Here is how your data is handled:</p>
 
         <h2>Local Storage Only</h2>
-        <p>All settings, notebook entries, and high scores created within this extension are stored <strong>locally on your device</strong> using the Chrome Storage API. No data is ever transmitted to, or stored on, our servers or any third-party servers.</p>
+        <p>All settings, notebook entries, and high scores created within this extension are stored <strong>locally on your device</strong> using the Chrome Storage API. No data is ever transmitted to, or stored on, our servers.</p>
 
         <h2>Permissions & Usage</h2>
-            <li><code>storage / unlimitedStorage</code>: Used to save your settings, notebook entries, game high scores, and custom media (like video wallpapers) safely on your local machine.</li>
+        <ul>
+            <li><code>storage / unlimitedStorage</code>: Used to save your settings, notebook entries, game high scores, and custom background images or videos locally on your device. Extended storage is required to support user-uploaded media files.</li>
             <li><code>tabs / sessions</code>: Used to display your recently closed and open tabs within the dashboard widget.</li>
-            <li><code>favicon</code>: Used to display website icons for your recent tabs.</li>
-            <li><code>geolocation</code>: Used to fetch your local city and temperature via the Open-Meteo API.</li>
+            <li><code>geolocation</code>: Used to fetch your precise location for weather data via the Open-Meteo API.</li>
+            <li><code>search</code>: Used to route search queries through your browser's default search engine via the Chrome Search API. No query data is sent to the extension developer.</li>
         </ul>
 
         <h2>No Tracking</h2>
@@ -115,8 +116,8 @@
         <h2>Third-Party Services</h2>
         <p>BalanceTab interacts with the following services to provide its core features:</p>
         <ul>
-            <li><strong>Open-Meteo API</strong>: For real-time weather data.</li>
-            <li><strong>ipinfo.io</strong>: For location fallback if GPS is unavailable.</li>
+            <li><strong>Open-Meteo API</strong>: For real-time weather data based on your location coordinates.</li>
+            <li><strong>ipinfo.io</strong>: To resolve your approximate city name for the weather display. Your IP address is sent to this service to determine your city. No personal data beyond your IP is shared.</li>
             <li><strong>Google Fonts</strong>: To provide custom typography.</li>
         </ul>
 
