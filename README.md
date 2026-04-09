@@ -9,13 +9,13 @@ Privacy policies for my Chrome extensions, hosted via GitHub Pages.
 **Privacy Policy URL** (paste this in Chrome Web Store):
 **privacy_policy.md**
 ```
-https://rudra-gupta15.github.io/extension-privacy/growth_privacy.html
+https://rudra-gupta15.github.io/extension-privacy/Growth%20Tracker/growth_privacy.html
 ```
 ```
-https://rudra-gupta15.github.io/extension-privacy/growth_how-to-use.html
+https://rudra-gupta15.github.io/extension-privacy/Growth%20Tracker/growth_how-to-use.html
 ```
 ```
-https://rudra-gupta15.github.io/extension-privacy/growth_uninstall.html
+https://rudra-gupta15.github.io/extension-privacy/Growth%20Tracker/growth_uninstall.html
 ```
 
 ---
