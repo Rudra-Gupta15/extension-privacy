@@ -3,195 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Use - Growth Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Mastering the Oasis - Growth Tracker</title>
+    <link href="fonts/fonts.css" rel="stylesheet">
     <style>
         :root {
             --bg-oasis: #fdfaf5;
             --forest-deep: #1e3a0f;
             --forest-leaf: #2d5016;
             --growth-vibrant: #8db660;
-            --growth-soft: #f0f7ea;
+            --growth-soft: #f1f8e9;
             --text-main: #2a3426;
             --text-muted: #6b7566;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(45, 80, 22, 0.1);
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            background-color: var(--bg-oasis);
+            background: radial-gradient(circle at top right, #f1f8e9 0%, #fdfaf5 100%);
             font-family: 'DM Sans', sans-serif;
             color: var(--text-main);
             line-height: 1.6;
             margin: 0;
+            padding: 60px 20px;
             display: flex;
             justify-content: center;
-            padding: 40px 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
         }
 
         h1 {
             font-family: 'Crimson Pro', serif;
-            font-size: 42px;
+            font-size: 56px;
             color: var(--forest-leaf);
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
         }
 
-        .step-card {
-            background: white;
-            padding: 32px;
-            border-radius: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.04);
-            border: 1px solid rgba(141, 182, 96, 0.1);
-            display: flex;
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
-            align-items: flex-start;
-            transition: transform 0.3s ease;
+            margin-bottom: 60px;
         }
 
-        .step-card:hover {
-            transform: translateY(-4px);
+        .feature-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 32px;
+            border-radius: 28px;
+            border: 1.5px solid var(--glass-border);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .step-num {
-            width: 40px;
-            height: 40px;
-            background: var(--forest-leaf);
-            color: white;
-            border-radius: 50%;
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            border-color: var(--growth-vibrant);
+        }
+
+        .icon-box {
+            width: 54px;
+            height: 54px;
+            background: var(--growth-soft);
+            color: var(--forest-leaf);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.2);
+            font-size: 24px;
         }
 
-        .step-content h2 {
+        h2 {
             font-family: 'Crimson Pro', serif;
-            font-size: 22px;
-            margin: 0 0 8px 0;
+            font-size: 26px;
             color: var(--forest-leaf);
+            margin: 0;
         }
 
-        .step-content p {
-            margin: 0;
+        p {
             font-size: 15px;
             color: var(--text-muted);
+            margin: 0;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            background: var(--growth-soft);
-            color: var(--forest-leaf);
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .back-btn {
+        .highlight-box {
             background: var(--forest-leaf);
             color: white;
-            padding: 14px 28px;
-            border-radius: 14px;
+            padding: 40px;
+            border-radius: 32px;
+            margin-bottom: 60px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 16px 48px rgba(30, 58, 15, 0.15);
+        }
+
+        .highlight-content h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 32px;
+            margin: 0 0 12px 0;
+        }
+
+        .highlight-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        .dev-note {
+            background: #fffbeb;
+            border: 1.5px dashed #f59e0b;
+            padding: 24px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        .dev-note::before {
+            content: '💬';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .joke-text {
+            font-style: italic;
+            font-weight: 500;
+            color: #92400e;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: var(--forest-leaf);
             text-decoration: none;
             font-weight: 700;
-            display: inline-block;
-            box-shadow: 0 8px 24px rgba(45, 80, 22, 0.15);
+            font-size: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover { opacity: 0.7; }
+
+        @media (max-width: 600px) {
+            .highlight-box { flex-direction: column; text-align: center; padding: 24px; }
+            h1 { font-size: 40px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Oasis</h1>
+        <header>
+            <h1>Master Your Oasis</h1>
+            <p class="hero-subtitle">Transform your digital browsing into a flourishing paradise. Here is how to grow your productivity tree from a seedling to a legend.</p>
+        </header>
 
-        <div class="step-card">
-            <div class="step-num">1</div>
-            <div class="step-content">
-                <div class="badge">Configuration</div>
-                <h2>Set Your Boundaries</h2>
-                <p>Go to <b>Settings</b> and define your Growth and Neutral domains. Any website not listed will automatically be treated as a distraction.</p>
+        <div class="grid">
+            <!-- Paradise Card -->
+            <div class="feature-card">
+                <div class="icon-box">🌴</div>
+                <h2>The Growth Engine</h2>
+                <p>Your tree grows in real-time as you browse <b>Productive</b> sites. Watch it wilt or lose coconuts if you spend too much time on distractions.</p>
+            </div>
+
+            <!-- Timer Card -->
+            <div class="feature-card">
+                <div class="icon-box">⏱️</div>
+                <h2>Focus Engine</h2>
+                <p>Choose between <b>Stopwatch</b> (track any project link) or <b>Pomodoro</b> (structured 25/5 intervals). Both contribute massively to growth.</p>
+            </div>
+
+            <!-- Block Card -->
+            <div class="feature-card">
+                <div class="icon-box">🛡️</div>
+                <h2>The Zen Block</h2>
+                <p>While in Pomodoro mode, your "Distraction" domains are automatically blocked, redirecting you back to a calm focus page to stay on track.</p>
+            </div>
+
+            <!-- Smart Categorization -->
+            <div class="feature-card">
+                <div class="icon-box">🏷️</div>
+                <h2>Smart Tagging</h2>
+                <p>Sites fall into <b>Growth</b> (Study/Work), <b>Neutral</b> (Tools), or <b>Distraction</b> (Social). You can fully customize these in Settings.</p>
+            </div>
+
+            <!-- History Card -->
+            <div class="feature-card">
+                <div class="icon-box">📊</div>
+                <h2>Visual History</h2>
+                <p>Review your day with percentage breakdowns in the <b>Tracker</b> tab, or journal your journey in the <b>Calendar</b>.</p>
+            </div>
+
+            <!-- Privacy Card -->
+            <div class="feature-card">
+                <div class="icon-box">🔒</div>
+                <h2>100% Privacy</h2>
+                <p>Every second tracked and every site visited stays entirely on your computer. We have no servers and no access to your data.</p>
             </div>
         </div>
 
-        <div class="step-card">
-            <div class="step-num">2</div>
-            <div class="step-content">
-                <div class="badge">Growth</div>
-                <h2>Watch Your Paradise Bloom</h2>
-                <p>Stay on productive sites to see your tree grow tall and lush. Inactivity or too much distraction will cause the leaves to wither and coconuts to fall.</p>
+        <!-- Special Focus Section -->
+        <div class="highlight-box">
+            <div style="font-size: 64px;">💎</div>
+            <div class="highlight-content">
+                <h3>Zen Principle: Consistency</h3>
+                <p>Building a paradise takes time. Your tree's health resets every 24 hours to give you a fresh start. If you step away from your keyboard, we'll automatically pause your timers so your data stays pure.</p>
             </div>
         </div>
 
-        <div class="step-card">
-            <div class="step-num">3</div>
-            <div class="step-content">
-                <div class="badge">Tasks</div>
-                <h2>Cultivate Your Habits</h2>
-                <p>Use the <b>Todo</b> tab to manage your daily recurring tasks. Mark them off to stay on track; daily tasks reset every morning to help you build consistency.</p>
-            </div>
+        <div class="dev-note">
+            <p class="joke-text">
+                "I know most people don't actually read documentation... so I've also hidden helpful 'How it works' notes throughout the extension so you can master it without even trying!"
+            </p>
+            <p style="font-size: 13px; margin-top: 8px; color: #b45309;">— Rudra Gupta, Developer</p>
         </div>
 
-        <div class="step-card">
-            <div class="step-num">4</div>
-            <div class="step-content">
-                <div class="badge">Focus</div>
-                <h2>Deep Work Stopwatch</h2>
-                <p>Use the <b>Timer</b> tab to track a specific project. Paste a link, start the timer, and we'll record exactly how much deep-work progress you made on that target.</p>
-            </div>
-        </div>
+        <a href="#" class="back-link" onclick="window.close(); return false;">← Return to your Paradise</a>
 
-        <div class="step-card">
-            <div class="step-num">5</div>
-            <div class="step-content">
-                <div class="badge">Intelligence</div>
-                <h2>YouTube Study Mode</h2>
-                <p>We automatically detect educational content on YouTube based on video titles. You can also manually toggle <b>Study Mode</b> in the Timer tab to stay productive while learning.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-num">6</div>
-            <div class="step-content">
-                <div class="badge">Analysis</div>
-                <h2>Review Your Journey</h2>
-                <p>Check the <b>Tracker</b> for a detailed percentage breakdown of your day. Use the <b>Calendar</b> to mark milestones and journal your daily success.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-num">7</div>
-            <div class="step-content">
-                <div class="badge">Preferences</div>
-                <h2>Personalize Your Oasis</h2>
-                <p>Visit <b>Settings</b> to toggle <b>Dark Mode (Oasis Dark)</b> for a better nighttime experience, or reset your tracking data if you need a fresh start.</p>
-            </div>
-        </div>
-
-        <div class="step-card">
-            <div class="step-num">8</div>
-            <div class="step-content">
-                <div class="badge">Important</div>
-                <h2>Active Tracking Only</h2>
-                <p>Time is only tracked while Chrome is your <b>active, focused window</b>. If you switch to another app, your desktop, or lock your screen, the timer automatically pauses.</p>
-            </div>
-        </div>
-
-        <div class="cta-section">
-            <a href="#" class="back-btn" onclick="window.close(); return false;">Start Growing Now</a>
+        <div style="text-align: center; margin-top: 60px; font-size: 12px; color: var(--text-muted); opacity: 0.6;">
+            &copy; 2026 Growth Tracker • Zen Oasis Edition v2.5.0
         </div>
     </div>
 </body>
