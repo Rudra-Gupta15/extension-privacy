@@ -17,6 +17,23 @@
             --glass-bg: rgba(255, 255, 255, 0.7);
             --glass-border: rgba(45, 80, 22, 0.1);
         }
+        
+        /* 🌙 Dark Mode Support */
+        body.dark-mode {
+            --bg-oasis: #0a0a0a;
+            --forest-deep: #ffffff;
+            --forest-leaf: #ffffff;
+            --growth-vibrant: #a3e635;
+            --growth-soft: rgba(255, 255, 255, 0.05);
+            --text-main: #ededed;
+            --text-muted: #a1a1a1;
+            --glass-bg: rgba(18, 18, 18, 0.8);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode {
+            background: radial-gradient(circle at top right, #1a1a1a 0%, #0a0a0a 100%);
+        }
 
         * { box-sizing: border-box; }
 
@@ -117,6 +134,14 @@
             gap: 40px;
             align-items: center;
             box-shadow: 0 16px 48px rgba(30, 58, 15, 0.15);
+        }
+
+        body.dark-mode .highlight-box {
+            color: #000;
+        }
+        
+        body.dark-mode .highlight-box p {
+            color: rgba(0, 0, 0, 0.7);
         }
 
         .highlight-content h3 {
@@ -227,6 +252,46 @@
                 <p>Every second tracked and every site visited stays entirely on your computer. We have no servers and no access to your data.</p>
             </div>
         </div>
+
+        <!-- NEW Domain Management Section -->
+        <div class="highlight-box" style="background: var(--growth-soft); color: var(--text-main); border: 2px solid var(--glass-border); flex-direction: column; align-items: flex-start; gap: 24px;">
+            <div style="display: flex; gap: 20px; align-items: center; width: 100%;">
+                <div style="font-size: 48px;">⚙️</div>
+                <div class="highlight-content">
+                    <h3 style="color: var(--forest-leaf); margin-bottom: 8px;">Curating Your Digital Environment</h3>
+                    <p style="color: var(--text-muted);">Manage your domains in the <b>Settings</b> tab to define what counts as growth and what is a distraction.</p>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; width: 100%;">
+                <div class="oasis-card" style="padding: 16px; margin-bottom: 0; background: white; border-color: rgba(255, 71, 87, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background: #ff7675;"></div>
+                        <div style="font-size: 10px; font-weight: 800; color: #ff7675; text-transform: uppercase;">Blocked</div>
+                    </div>
+                    <p style="font-size: 13px;">Sites that <b>wilt your tree</b>. These locations are automatically blocked during Pomodoro mode.</p>
+                </div>
+                <div class="oasis-card" style="padding: 16px; margin-bottom: 0; background: white; border-color: rgba(214, 173, 105, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background: #d6ad69;"></div>
+                        <div style="font-size: 10px; font-weight: 800; color: #d6ad69; text-transform: uppercase;">Neutral</div>
+                    </div>
+                    <p style="font-size: 13px;">Tools (like Search Engines) that you need for work but don't directly contribute to growth.</p>
+                </div>
+                <div class="oasis-card" style="padding: 16px; margin-bottom: 0; background: white; border-color: rgba(141, 182, 96, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--growth-vibrant);"></div>
+                        <div style="font-size: 10px; font-weight: 800; color: var(--forest-leaf); text-transform: uppercase;">Growth</div>
+                    </div>
+                    <p style="font-size: 13px;">Sites where the magic happens. Every minute spent here <b>feeds your paradise</b>.</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(45, 80, 22, 0.05); padding: 20px; border-radius: 16px; width: 100%; font-size: 14px; border: 1px dashed var(--glass-border);">
+                <b>Pro Tip:</b> Use the <b>Category Toggle</b> next to each list to quickly enable or disable entire groups of sites without deleting them.
+            </div>
+        </div>
+
         <!-- New Achievements Section -->
         <header style="margin-top: 80px; margin-bottom: 40px;">
             <h1 style="font-size: 42px;">Legendary Milestones</h1>
@@ -385,5 +450,20 @@
             &copy; 2026 Growth Tracker • Zen Oasis Edition v2.5.0
         </div>
     </div>
+    <script>
+        // Apply Dark Mode from Storage
+        chrome.storage.local.get('darkMode', (data) => {
+            if (data.darkMode) {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        // Listen for changes
+        chrome.storage.onChanged.addListener((changes) => {
+            if (changes.darkMode) {
+                document.body.classList.toggle('dark-mode', changes.darkMode.newValue);
+            }
+        });
+    </script>
 </body>
 </html>
