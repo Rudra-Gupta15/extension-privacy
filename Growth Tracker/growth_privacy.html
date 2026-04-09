@@ -15,6 +15,17 @@
             --text-muted: #6b7566;
             --glass-bg: rgba(255, 255, 255, 0.7);
         }
+        
+        /* 🌙 Dark Mode Support */
+        body.dark-mode {
+            --bg-oasis: #0a0a0a;
+            --forest-deep: #ffffff;
+            --forest-leaf: #ffffff;
+            --growth-vibrant: #a3e635;
+            --text-main: #ededed;
+            --text-muted: #a1a1a1;
+            --glass-bg: rgba(18, 18, 18, 0.8);
+        }
 
         body {
             background-color: var(--bg-oasis);
@@ -137,5 +148,20 @@
             &copy; 2026 Growth Tracker • Zen Oasis Edition v2.5.0
         </div>
     </div>
+    <script>
+        // Apply Dark Mode from Storage
+        chrome.storage.local.get('darkMode', (data) => {
+            if (data.darkMode) {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        // Listen for changes
+        chrome.storage.onChanged.addListener((changes) => {
+            if (changes.darkMode) {
+                document.body.classList.toggle('dark-mode', changes.darkMode.newValue);
+            }
+        });
+    </script>
 </body>
 </html>
