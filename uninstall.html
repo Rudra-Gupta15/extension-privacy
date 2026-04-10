@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell - TimeMark</title>
+    <style>
+        :root {
+            --bg:       #0d0d0d;
+            --bg2:      #151515;
+            --bg3:      #1c1c1c;
+            --bg4:      #232323;
+            --border:   #2a2a2a;
+            --border2:  #333;
+            --red:      #e91e63;
+            --red-dim:  #c2185b;
+            --accent:   #ffc107;
+            --text:     #f0f0f0;
+            --text2:    #aaa;
+            --text3:    #555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .farewell-card {
+            background: var(--bg2);
+            padding: 60px 40px;
+            border-radius: 32px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
+            max-width: 520px;
+            width: 100%;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .farewell-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--red), var(--accent));
+        }
+
+        .logo-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg3);
+            border: 1px solid var(--border2);
+            padding: 16px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        p {
+            font-size: 16px;
+            color: var(--text2);
+            margin-bottom: 32px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feedback-btn {
+            background: var(--red);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.25);
+        }
+
+        .feedback-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: var(--red-dim);
+            box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
+        }
+
+        .feedback-btn svg {
+            transition: transform 0.2s;
+        }
+
+        .feedback-btn:hover svg {
+            transform: translateX(3px);
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text3);
+            letter-spacing: 0.5px;
+        }
+
+        strong {
+            color: var(--red);
+        }
+    </style>
+</head>
+<body>
+    <div class="farewell-card">
+        <div class="logo-box">
+            <svg width="40" height="40" viewBox="0 0 24 24">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" fill="#e91e63"/>
+                <rect x="5" y="7" width="14" height="3" fill="#ffc107"/>
+            </svg>
+        </div>
+
+        <h1>We're sad to see you go</h1>
+        <p>Thank you for letting <strong>TimeMark</strong> be part of your journey. We're sorry it didn't work out this time.</p>
+        
+        <p style="font-size: 13px; color: var(--text3); margin-bottom: 40px;">
+            If TimeMark didn't meet your expectations, we'd love to know how we can improve. Every piece of feedback helps us build a better experience.
+        </p>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzl92JrqiG37cyKM6zW82hBccuCJNWdxN1F1mq4tlfDrScbQ/viewform?usp=dialog" target="_blank" class="feedback-btn">
+            Leave Feedback
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <div class="footer">
+            &copy; 2026 TimeMark &bull; Built with pride using Rudy's Design System
+        </div>
+    </div>
+</body>
+</html>
