@@ -44,7 +44,7 @@ https://rudra-gupta15.github.io/extension-privacy/how_to_use_1
 https://rudra-gupta15.github.io/extension-privacy/TimeMark/privacy
 ```
 ```
-https://rudra-gupta15.github.io/extension-privacy/TimeMark/uninstal
+https://rudra-gupta15.github.io/extension-privacy/TimeMark/uninstall
 ```
 
 ---
