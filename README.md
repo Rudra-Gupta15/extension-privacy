@@ -41,7 +41,10 @@ https://rudra-gupta15.github.io/extension-privacy/how_to_use_1
 **Privacy Policy URL** (paste this in Chrome Web Store):
 **privacy.html**
 ```
-https://rudra-gupta15.github.io/extension-privacy/privacy
+https://rudra-gupta15.github.io/extension-privacy/TimeMark/privacy
+```
+```
+https://rudra-gupta15.github.io/extension-privacy/TimeMark/uninstal
 ```
 
 ---
