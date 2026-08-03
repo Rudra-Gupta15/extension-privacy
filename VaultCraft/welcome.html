@@ -6,17 +6,17 @@
     <title>Welcome to VaultCraft</title>
     <style>
         :root {
-            --ink: #1A1D20;
-            --paper: #FAF8F5;
+            --ink: #0F172A;
+            --paper: #F8FAFC;
             --card: #FFFFFF;
-            --border: #ECE8E1;
-            --subtext: #838790;
-            --olive: #5A6442;
-            --clay: #B05530;
-            --beige-bg: #F4EFE6;
-            --green-bg: #EAF3E9;
-            --peach-bg: #FBF0EB;
-            --yellow-bg: #FAF3E5;
+            --border: #E2E8F0;
+            --subtext: #64748B;
+            --olive: #0B2545;
+            --clay: #334155;
+            --beige-bg: #F1F5F9;
+            --green-bg: #EEF2F7;
+            --peach-bg: #E2E8F0;
+            --yellow-bg: #F8FAFC;
         }
 
         * { box-sizing: border-box; }
@@ -182,6 +182,31 @@
             .highlight-box { flex-direction: column; text-align: center; padding: 24px; }
             h1 { font-size: 32px; }
         }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(26, 29, 32, 0.5);
+            backdrop-filter: blur(4px);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 1000;
+            opacity: 0; visibility: hidden;
+            transition: all 0.2s ease;
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-box {
+            background: var(--card); padding: 32px; border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15); max-width: 400px; width: 90%;
+            text-align: center; border: 1px solid var(--border);
+            transform: translateY(20px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.active .modal-box { transform: translateY(0); }
+        .modal-visual {
+            display: flex; align-items: center; justify-content: center;
+            gap: 16px; margin-bottom: 24px; font-size: 36px;
+        }
+        .modal-visual img { width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .modal-box h3 { font-size: 22px; font-weight: 800; margin: 0 0 12px 0; color: var(--ink); }
+        .modal-box p { color: var(--subtext); font-size: 15px; margin: 0 0 28px 0; line-height: 1.5; }
     </style>
 </head>
 <body>
@@ -267,9 +292,23 @@
             <p style="font-size: 12.5px; margin-top: 10px; color: var(--clay);">— Rudra Gupta, Developer</p>
         </div>
 
-        <button class="cta" onclick="window.close()">Got it — open my vault</button>
+        <button class="cta" onclick="document.getElementById('install-modal').classList.add('active')">Got it — open my vault</button>
 
         <footer>&copy; 2026 VaultCraft — Smart Inventory & Price Vault</footer>
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="install-modal" class="modal-overlay" onclick="this.classList.remove('active')">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-visual">
+                <img src="icons/icon48.png" alt="VaultCraft">
+                <span style="color: var(--subtext); font-size: 24px;">→</span>
+                <span>🧩</span>
+            </div>
+            <h3>Almost there!</h3>
+            <p>Click the <strong>VaultCraft puzzle piece icon</strong> in your browser's top right corner to open your vault.</p>
+            <button class="cta" style="margin: 0 auto; width: 100%;" onclick="document.getElementById('install-modal').classList.remove('active')">Got it!</button>
+        </div>
     </div>
 </body>
 </html>
