@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultCraft — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the VaultCraft Chrome extension. All data stays on-device — no backend, no sync, no analytics." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #FAFAFA;
+      color: #334155;
+      line-height: 1.65;
+      min-height: 100vh;
+      padding: 60px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .doc-container { max-width: 680px; margin: 0 auto; }
+
+    .summary-line { font-size: 14px; color: #64748B; margin-bottom: 28px; }
+
+    h1.doc-title { font-family: 'Lora', Georgia, serif; font-size: 32px; font-weight: 700; color: #0B2545; margin-bottom: 12px; letter-spacing: -0.01em; }
+    .doc-divider { width: 100%; height: 1px; background: #E2E8F0; margin-bottom: 24px; }
+    .doc-meta { font-size: 13px; color: #64748B; margin-bottom: 16px; }
+    .doc-intro { font-size: 14px; color: #334155; margin-bottom: 32px; }
+    .doc-section { margin-bottom: 32px; }
+    h2.section-title { font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 700; color: #0F172A; margin-bottom: 10px; }
+    p.section-desc { font-size: 14px; color: #334155; line-height: 1.65; margin-bottom: 12px; }
+    ul.doc-list { padding-left: 20px; margin-bottom: 16px; }
+    ul.doc-list li { font-size: 14px; color: #334155; margin-bottom: 8px; line-height: 1.6; }
+
+    code {
+      background: #EEF2F7; border: 1px solid #CBD5E1; border-radius: 4px;
+      padding: 2px 6px; font-size: 12.5px; color: #0B2545; font-weight: 700; font-family: monospace;
+    }
+
+    .highlight-box {
+      background: #F8FAFC; border-left: 3px solid #0B2545;
+      padding: 12px 16px; margin-top: 4px; font-size: 13.5px; color: #334155; font-weight: 600;
+    }
+
+    a { color: #0B2545; text-decoration: underline; font-weight: 600; }
+    a:hover { color: #06172E; }
+    strong { color: #0B2545; font-weight: 800; }
+
+    footer { font-size: 12.5px; color: #94A3B8; margin-top: 40px; border-top: 1px solid #E2E8F0; padding-top: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="doc-container">
+  <h1 class="doc-title">Privacy Policy</h1>
+  <div class="doc-divider"></div>
+  <div class="summary-line">No data collected · No backend server · No analytics or tracking · No account required · 100% on-device storage</div>
+  <div class="doc-meta">Last updated: August 2026</div>
+
+  <p class="doc-intro">
+    <strong>VaultCraft — Tech Inventory &amp; Price Tracker</strong> is built with privacy as a core principle. Below is exactly how your data is handled — this matches the extension's actual code, not boilerplate.
+  </p>
+
+  <div class="doc-section">
+    <h2 class="section-title">Where your data lives</h2>
+    <p class="section-desc">
+      All inventory items, prices, categories, vault workspaces, images, and preferences are stored <strong>locally on your device</strong> using the browser's built-in <code>IndexedDB</code> and <code>localStorage</code> APIs.
+    </p>
+    <p class="section-desc">
+      No data is ever transmitted to, or stored on, any VaultCraft server or third-party server — because no such server exists. Uninstalling the extension permanently deletes all of it.
+    </p>
+    <div class="highlight-box">Your inventory never leaves your browser.</div>
+  </div>
+
+  <div class="doc-section">
+    <h2 class="section-title">Autofill — URL fetching</h2>
+    <p class="section-desc">
+      VaultCraft includes an optional <strong>Autofill</strong> feature. When you paste a product URL (e.g., from Amazon or Flipkart) and click <em>Fetch</em>, the extension makes a direct request to that URL, from your own browser, to read publicly visible page details (title, price, image).
+    </p>
+    <ul class="doc-list">
+      <li>Only the URL <em>you explicitly paste</em> is fetched — there is no background browsing or crawling.</li>
+      <li>The fetched page content is parsed locally in your browser and is never logged, stored remotely, or shared.</li>
+      <li>Chrome will prompt you for one-time permission the first time you use this feature.</li>
+      <li>If you decline, VaultCraft still works fully — you can add items manually.</li>
+    </ul>
+  </div>
+
+  <div class="doc-section">
+    <h2 class="section-title">Permissions &amp; usage</h2>
+    <ul class="doc-list">
+      <li><code>optional host permissions</code> — requested on demand, only at the moment you trigger Autofill on a URL you provide. Used solely to fetch that page's public metadata.</li>
+    </ul>
+    <p class="section-desc">
+      VaultCraft does not request <code>storage</code>, <code>tabs</code>, <code>activeTab</code>, or <code>scripting</code> permissions — none of them are needed, since local data is handled entirely through standard web APIs (<code>IndexedDB</code>/<code>localStorage</code>) that require no special permission grant.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2 class="section-title">No tracking</h2>
+    <p class="section-desc">
+      VaultCraft does not use analytics, crash reporting, advertising SDKs, cookies, or any tool that transmits data off your device. No personally identifiable information (PII) is collected at any point.
+    </p>
+  </div>
+
+  <div class="doc-section">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-desc">
+      For questions, support, or feedback, reach the developer <strong>Rudra Gupta</strong>:
+    </p>
+    <ul class="doc-list">
+      <li><strong>Support/Report:</strong> <a href="https://forms.gle/feedback" target="_blank" rel="noopener">Feedback Form</a></li>
+      <li><strong>Portfolio:</strong> <a href="https://rudra-gupta.vercel.app" target="_blank" rel="noopener">rudra-gupta.vercel.app</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rudra-kumar-gupta" target="_blank" rel="noopener">rudra-kumar-gupta</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/Rudra-Gupta15" target="_blank" rel="noopener">Rudra-Gupta15</a></li>
+    </ul>
+    <p class="section-desc">Every message is read personally and helps improve VaultCraft.</p>
+  </div>
+
+  <footer>
+    This policy applies to VaultCraft as published on the Chrome Web Store and reflects the permissions actually declared in its manifest.
+  </footer>
+</div>
+
+</body>
+</html>

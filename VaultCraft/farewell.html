@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell - VaultCraft</title>
+    <style>
+        :root {
+            --ink: #1A1D20;
+            --paper: #FAF8F5;
+            --card: #FFFFFF;
+            --border: #ECE8E1;
+            --subtext: #838790;
+            --olive: #5A6442;
+            --clay: #B05530;
+        }
+        body {
+            background-color: var(--paper);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+            color: var(--ink);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .vault-card {
+            background: var(--card);
+            padding: 60px 40px;
+            border-radius: 32px;
+            box-shadow: 0 12px 60px rgba(26, 29, 32, 0.06);
+            max-width: 500px;
+            width: 100%;
+            border: 1px solid var(--border);
+        }
+        .icon {
+            font-size: 60px;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        p {
+            font-size: 15.5px;
+            color: var(--subtext);
+            margin-bottom: 32px;
+        }
+        .feedback-btn {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 15px 32px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+        .feedback-btn:hover {
+            opacity: 0.88;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--subtext);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="vault-card">
+        <div class="icon">🏺</div>
+        <h1>Your vault is closed</h1>
+        <p>Thanks for trying VaultCraft. Since everything was stored locally on your device, uninstalling has cleared it completely — nothing was left behind on any server.</p>
+
+        <p style="font-size: 13.5px; margin-bottom: 40px;">If something didn't work for you, a quick note would help make VaultCraft better for the next person.</p>
+        <a href="https://forms.gle/feedback" target="_blank" class="feedback-btn">Leave Feedback</a>
+        <div class="footer">
+            &copy; 2026 VaultCraft — Smart Inventory & Price Vault
+        </div>
+    </div>
+</body>
+</html>
