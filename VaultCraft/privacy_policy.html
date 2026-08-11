@@ -89,10 +89,11 @@
   <div class="doc-section">
     <h2 class="section-title">Permissions &amp; usage</h2>
     <ul class="doc-list">
-      <li><code>optional host permissions</code> — requested on demand, only at the moment you trigger Autofill on a URL you provide. Used solely to fetch that page's public metadata.</li>
+      <li><code>optional host permissions</code> — requested on demand when you trigger Autofill on a URL you provide. Used solely to fetch that page's public metadata.</li>
+      <li><code>optional permissions (tabs &amp; scripting)</code> — off by default. Only requested if you explicitly turn on the optional <em>"Enable accurate live-tab pricing"</em> setting. Used solely to read live prices from your open retailer tabs for higher accuracy.</li>
     </ul>
     <p class="section-desc">
-      VaultCraft does not request <code>storage</code>, <code>tabs</code>, <code>activeTab</code>, or <code>scripting</code> permissions — none of them are needed, since local data is handled entirely through standard web APIs (<code>IndexedDB</code>/<code>localStorage</code>) that require no special permission grant.
+      VaultCraft requires zero mandatory permissions on install. Local data is handled entirely through standard web APIs (<code>IndexedDB</code>/<code>localStorage</code>) that require no special permission grants.
     </p>
   </div>
 
