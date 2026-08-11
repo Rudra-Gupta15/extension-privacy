@@ -4,50 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VaultCraft — Privacy Policy</title>
-  <meta name="description" content="Privacy policy for the VaultCraft Chrome extension. All data stays on-device — no backend, no sync, no analytics." />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #FAFAFA;
-      color: #334155;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0F1115;
+      background-image: radial-gradient(circle at top right, #1A1D24 0%, #0F1115 60%);
+      color: #E4E6EB;
       line-height: 1.65;
       min-height: 100vh;
       padding: 60px 20px;
-      -webkit-font-smoothing: antialiased;
     }
 
-    .doc-container { max-width: 680px; margin: 0 auto; }
+    .doc-container { max-width: 720px; margin: 0 auto; }
 
-    .summary-line { font-size: 14px; color: #64748B; margin-bottom: 28px; }
+    h1.doc-title {
+      font-size: 38px; font-weight: 800; color: #FFFFFF;
+      margin-bottom: 14px; letter-spacing: -0.02em;
+    }
+    .doc-divider { width: 100%; height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 28px; }
 
-    h1.doc-title { font-family: 'Lora', Georgia, serif; font-size: 32px; font-weight: 700; color: #0B2545; margin-bottom: 12px; letter-spacing: -0.01em; }
-    .doc-divider { width: 100%; height: 1px; background: #E2E8F0; margin-bottom: 24px; }
-    .doc-meta { font-size: 13px; color: #64748B; margin-bottom: 16px; }
-    .doc-intro { font-size: 14px; color: #334155; margin-bottom: 32px; }
-    .doc-section { margin-bottom: 32px; }
-    h2.section-title { font-family: 'Lora', Georgia, serif; font-size: 19px; font-weight: 700; color: #0F172A; margin-bottom: 10px; }
-    p.section-desc { font-size: 14px; color: #334155; line-height: 1.65; margin-bottom: 12px; }
+    .keypoints-box {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 3px solid #B05530;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-bottom: 32px;
+    }
+    .keypoints-label {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+      color: #B05530; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .keypoints-box ul { list-style: none; }
+    .keypoints-box li {
+      font-size: 14.5px; color: #D6D9DF; margin-bottom: 9px;
+      padding-left: 22px; position: relative;
+    }
+    .keypoints-box li::before {
+      content: "✓"; position: absolute; left: 0; color: #8DB660; font-weight: 700;
+    }
+    .keypoints-box li strong { color: #FFFFFF; font-weight: 700; }
+    .keypoints-box a { color: #B05530; text-decoration: underline; }
+
+    .doc-meta { font-size: 13px; color: #8A8F98; margin-bottom: 18px; }
+    .doc-intro { font-size: 14.5px; color: #C4C7CE; margin-bottom: 36px; }
+
+    .doc-section { margin-bottom: 36px; }
+    h2.section-title {
+      font-size: 19px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px;
+    }
+    p.section-desc { font-size: 14.5px; color: #C4C7CE; line-height: 1.7; margin-bottom: 12px; }
     ul.doc-list { padding-left: 20px; margin-bottom: 16px; }
-    ul.doc-list li { font-size: 14px; color: #334155; margin-bottom: 8px; line-height: 1.6; }
+    ul.doc-list li { font-size: 14.5px; color: #C4C7CE; margin-bottom: 8px; }
 
     code {
-      background: #EEF2F7; border: 1px solid #CBD5E1; border-radius: 4px;
-      padding: 2px 6px; font-size: 12.5px; color: #0B2545; font-weight: 700; font-family: monospace;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px; padding: 2px 6px; font-size: 12.5px; color: #FFFFFF;
+      font-weight: 700; font-family: monospace;
     }
 
     .highlight-box {
-      background: #F8FAFC; border-left: 3px solid #0B2545;
-      padding: 12px 16px; margin-top: 4px; font-size: 13.5px; color: #334155; font-weight: 600;
+      background: rgba(255,255,255,0.04); border-left: 3px solid #5A6442;
+      padding: 12px 16px; font-size: 13.5px; color: #D6D9DF; font-weight: 600;
     }
 
-    a { color: #0B2545; text-decoration: underline; font-weight: 600; }
-    a:hover { color: #06172E; }
-    strong { color: #0B2545; font-weight: 800; }
+    table.perm-table {
+      width: 100%; border-collapse: collapse; margin-top: 8px;
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden;
+    }
+    table.perm-table th {
+      text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em;
+      color: #B05530; background: rgba(255,255,255,0.04);
+      padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    table.perm-table td {
+      font-size: 14px; color: #D6D9DF; padding: 14px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top;
+    }
+    table.perm-table tr:last-child td { border-bottom: none; }
+    table.perm-table td.perm-name { color: #FFFFFF; font-weight: 700; white-space: nowrap; }
 
-    footer { font-size: 12.5px; color: #94A3B8; margin-top: 40px; border-top: 1px solid #E2E8F0; padding-top: 20px; }
+    a { color: #B05530; text-decoration: underline; font-weight: 600; }
+    strong { color: #FFFFFF; font-weight: 700; }
+
+    footer {
+      font-size: 12px; color: #6B6F76; margin-top: 44px;
+      border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -55,7 +100,18 @@
 <div class="doc-container">
   <h1 class="doc-title">Privacy Policy</h1>
   <div class="doc-divider"></div>
-  <div class="summary-line">No data collected · No backend server · No analytics or tracking · No account required · 100% on-device storage</div>
+
+  <div class="keypoints-box">
+    <div class="keypoints-label">Key Points</div>
+    <ul>
+      <li><strong>What we collect:</strong> Nothing — everything stays in your browser</li>
+      <li><strong>Why:</strong> No data ever leaves your device</li>
+      <li><strong>Shared with:</strong> No one — there is no backend server</li>
+      <li><strong>Your rights:</strong> Uninstall anytime to delete everything instantly</li>
+      <li><strong>Contact:</strong> a <a href="https://forms.gle/feedback" target="_blank" rel="noopener">linked feedback form</a></li>
+    </ul>
+  </div>
+
   <div class="doc-meta">Last updated: August 2026</div>
 
   <p class="doc-intro">
@@ -88,11 +144,21 @@
 
   <div class="doc-section">
     <h2 class="section-title">Permissions &amp; usage</h2>
-    <ul class="doc-list">
-      <li><code>optional host permissions</code> — requested on demand when you trigger Autofill on a URL you provide. Used solely to fetch that page's public metadata.</li>
-      <li><code>optional permissions (tabs &amp; scripting)</code> — off by default. Only requested if you explicitly turn on the optional <em>"Enable accurate live-tab pricing"</em> setting. Used solely to read live prices from your open retailer tabs for higher accuracy.</li>
-    </ul>
-    <p class="section-desc">
+    <table class="perm-table">
+      <tr>
+        <th>Permission</th>
+        <th>Why we need it</th>
+      </tr>
+      <tr>
+        <td class="perm-name">Optional host permissions</td>
+        <td>Requested on demand, only when you trigger Autofill on a URL you provide. Used solely to fetch that page's public metadata.</td>
+      </tr>
+      <tr>
+        <td class="perm-name">Optional: tabs &amp; scripting</td>
+        <td>Off by default. Only requested if you explicitly turn on <em>"Enable accurate live-tab pricing"</em> in Settings. Used solely to read live prices from your open retailer tabs.</td>
+      </tr>
+    </table>
+    <p class="section-desc" style="margin-top: 16px;">
       VaultCraft requires zero mandatory permissions on install. Local data is handled entirely through standard web APIs (<code>IndexedDB</code>/<code>localStorage</code>) that require no special permission grants.
     </p>
   </div>
