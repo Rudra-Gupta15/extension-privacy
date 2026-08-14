@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SteamValue — Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0: #0B0D10;
+    --bg-1: #101216;
+    --bg-2: #171A1F;
+    --border: #30343B;
+    --text-0: #F5F5F5;
+    --text-2: #969BA5;
+    --accent: #FFB000;
+    --radius-lg: 16px;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-0);
+    color: var(--text-0);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .policy-container {
+    max-width: 740px;
+    width: 100%;
+    background: var(--bg-1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  .brand-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .brand-mark { color: var(--accent); font-size: 22px; }
+  .brand-name { font-size: 20px; font-weight: 800; }
+
+  h1 { font-size: 26px; font-weight: 800; margin: 0 0 8px 0; }
+  .last-updated { font-size: 13px; color: var(--text-2); margin-bottom: 28px; }
+
+  h2 { font-size: 17px; font-weight: 700; color: var(--accent); margin: 24px 0 10px 0; }
+  p, li { font-size: 14px; color: #D1D5DB; line-height: 1.6; margin: 0 0 12px 0; }
+  ul { padding-left: 20px; margin-bottom: 16px; }
+
+  .highlight-box {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="policy-container">
+    <div class="brand-header">
+      <span class="brand-mark">◆</span>
+      <span class="brand-name">SteamValue</span>
+    </div>
+
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Last Updated: August 13, 2026</div>
+
+    <div class="highlight-box">
+      <strong>Summary:</strong> SteamValue values your privacy. We do not sell, track, or share your personal information. Your profile preferences, wishlist data, and library information are stored locally on your device.
+    </div>
+
+    <h2>1. Information We Process</h2>
+    <p>SteamValue processes minimal data required to provide game deal lookup and recommendation services:</p>
+    <ul>
+      <li><strong>Steam Profile URLs:</strong> When you provide a public Steam profile link, we resolve your public Steam ID to fetch your public game library list and playtime data.</li>
+      <li><strong>Wishlist &amp; Preferences:</strong> Your tracked wishlist items, selected currency (INR, USD, EUR), and layout choices are stored locally using Chrome's <code>chrome.storage</code> API.</li>
+      <li><strong>Custom Text Libraries:</strong> Games pasted into the Smart Text Importer are processed solely to search for matching title images and filter owned deals.</li>
+    </ul>
+
+    <h2>2. How We Use Data</h2>
+    <p>Data processed by SteamValue is used strictly to:</p>
+    <ul>
+      <li>Calculate discount Buy-Scores comparing current prices to historical lows.</li>
+      <li>Hide owned games from deal suggestions when the setting is enabled.</li>
+      <li>Generate game recommendations based on your played titles.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p>To deliver real-time deal pricing and library data, SteamValue communicates with the following public endpoints:</p>
+    <ul>
+      <li><strong>Steam Web API &amp; Store API:</strong> Used to fetch public game details, prices, and library information.</li>
+      <li><strong>CheapShark API:</strong> Used for game price comparison and search data.</li>
+      <li><strong>Backend Proxy:</strong> Secure server proxy used to interface AI recommendation endpoints without exposing API keys.</li>
+    </ul>
+
+    <h2>4. Data Storage &amp; Control</h2>
+    <p>All stored profiles and settings are maintained in your browser's local storage. You have full control over your data and can clear or remove saved profiles at any time via <strong>Settings &gt; Accounts</strong> within the extension.</p>
+
+    <h2>5. Contact &amp; Updates</h2>
+    <p>If you have any questions regarding this Privacy Policy, you can reach out via GitHub or the extension support page.</p>
+  </div>
+
+</body>
+</html>
