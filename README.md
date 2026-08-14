@@ -50,5 +50,18 @@ https://rudra-gupta15.github.io/extension-privacy/VaultCraft/welcome.html
 https://rudra-gupta15.github.io/extension-privacy/VaultCraft/farewell.html
 ```
 ---
+## SteamValue — Deals & Library Tracker
+**Privacy Policy URL** (paste this in Chrome Web Store):
+**privacy.html**
+```
+https://rudra-gupta15.github.io/extension-privacy/steamvalue/privacy.html
+```
+```
+https://rudra-gupta15.github.io/extension-privacy/steamvalue/welcome.html
+```
+```
+https://rudra-gupta15.github.io/extension-privacy/steamvalue/farewell.html
+```
+---
 > These pages are hosted publicly only for Chrome Web Store compliance.
 > Extension source code is not included in this repository.
