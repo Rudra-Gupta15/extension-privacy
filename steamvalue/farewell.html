@@ -20,6 +20,18 @@
   }
 
   * { box-sizing: border-box; }
+
+  /* Custom Dark Scrollbars */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #3A3F4D; border-radius: 4px; transition: background 0.2s ease; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent, #FFB000); }
+  ::-webkit-scrollbar-corner { background: transparent; }
+  textarea::-webkit-scrollbar { width: 5px; }
+  textarea::-webkit-scrollbar-track { background: transparent; margin: 6px 2px; }
+  textarea::-webkit-scrollbar-thumb { background: #3A3F4D; border-radius: 10px; }
+  textarea::-webkit-scrollbar-thumb:hover { background: var(--accent, #FFB000); }
+  * { scrollbar-width: thin; scrollbar-color: #3A3F4D rgba(0, 0, 0, 0.2); }
   body {
     margin: 0;
     padding: 0;
@@ -186,9 +198,9 @@
       const reason = document.querySelector('input[name="reason"]:checked')?.value || 'Not specified';
       const comment = document.querySelector('textarea')?.value || '';
 
-      // Email destination for feedback submissions
-      const YOUR_EMAIL = "kumarguptarudra15@gmail.com";
-      const API_URL = `https://formsubmit.co/ajax/${YOUR_EMAIL}`;
+      // Secure FormSubmit endpoint hash (hides raw email address)
+      const FORMSUBMIT_HASH = "c99e20fd2b9a3c80171b560bf7d31b91";
+      const API_URL = `https://formsubmit.co/ajax/${FORMSUBMIT_HASH}`;
 
       try {
         await fetch(API_URL, {
