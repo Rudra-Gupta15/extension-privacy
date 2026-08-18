@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Welcome to SteamValue</title>
+<title>Welcome to LootPrice</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -20,6 +20,18 @@
   }
 
   * { box-sizing: border-box; }
+
+  /* Custom Dark Scrollbars */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb { background: #3A3F4D; border-radius: 4px; transition: background 0.2s ease; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent, #FFB000); }
+  ::-webkit-scrollbar-corner { background: transparent; }
+  textarea::-webkit-scrollbar { width: 5px; }
+  textarea::-webkit-scrollbar-track { background: transparent; margin: 6px 2px; }
+  textarea::-webkit-scrollbar-thumb { background: #3A3F4D; border-radius: 10px; }
+  textarea::-webkit-scrollbar-thumb:hover { background: var(--accent, #FFB000); }
+  * { scrollbar-width: thin; scrollbar-color: #3A3F4D rgba(0, 0, 0, 0.2); }
   body {
     margin: 0;
     padding: 0;
@@ -241,10 +253,10 @@
   <div class="welcome-container">
     <div class="brand-header">
       <span class="brand-mark">◆</span>
-      <span class="brand-name">SteamValue</span>
+      <span class="brand-name">LootPrice</span>
     </div>
 
-    <h1>Welcome to SteamValue! 🎉</h1>
+    <h1>Welcome to LootPrice! 🎉</h1>
     <p class="subtitle">Your ultimate extension for tracking Steam deals, smart Buy-Scores, wishlist savings, and multi-profile game library management.</p>
 
     <div class="feature-grid">
@@ -275,13 +287,13 @@
 
     <!-- How to Use Section -->
     <div class="how-to-use-section">
-      <h2 class="section-title">🚀 How to Use SteamValue</h2>
+      <h2 class="section-title">🚀 How to Use LootPrice</h2>
       <div class="steps-list">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-content">
             <div class="step-header">Pin Extension for 1-Click Access</div>
-            <div class="step-desc">Click the puzzle icon <code>🧩</code> in Chrome's top toolbar and pin <strong>SteamValue</strong> for fast access anytime.</div>
+            <div class="step-desc">Click the puzzle icon <code>🧩</code> in Chrome's top toolbar and pin <strong>LootPrice</strong> for fast access anytime.</div>
           </div>
         </div>
 
@@ -312,12 +324,12 @@
     </div>
 
     <div class="cta-box">
-      <div class="cta-text">Click the <strong>SteamValue icon</strong> in your browser toolbar to start browsing deals!</div>
+      <div class="cta-text">Click the <strong>LootPrice icon</strong> in your browser toolbar to start browsing deals!</div>
       <button class="cta-btn" onclick="window.close()">Get Started</button>
     </div>
 
     <div class="footer-links">
-      Need details on how your data is handled? Read our <a href="privacy.html" target="_blank">Privacy Policy</a>.
+      Need details on how your data is handled? Read our <a href="https://rudra-gupta15.github.io/extension-privacy/steamvalue/privacy.html" target="_blank">Privacy Policy</a>.
     </div>
   </div>
 
