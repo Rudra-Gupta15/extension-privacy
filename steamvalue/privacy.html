@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>LootPrice — Privacy Policy</title>
+<title>GameValue — Privacy Policy</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -70,50 +70,96 @@
   <div class="policy-container">
     <div class="brand-header">
       <span class="brand-mark">◆</span>
-      <span class="brand-name">LootPrice</span>
+      <span class="brand-name">GameValue</span>
     </div>
 
     <h1>Privacy Policy</h1>
-    <div class="last-updated">Last Updated: August 13, 2026</div>
+    <div class="last-updated">Last Updated: August 18, 2026</div>
 
     <div class="highlight-box">
-      <strong>Summary:</strong> LootPrice values your privacy. We do not sell, track, or share your personal information. Your profile preferences, wishlist data, and library information are stored locally on your device.
+      <p><strong>Summary:</strong> GameValue does not sell your data, does not track you across
+      sites, and has no user accounts. Your settings, saved profiles, wishlist and library stay in
+      your own browser. Two optional features send game data to our server, which forwards it to an
+      AI provider — those are described in full below.</p>
     </div>
 
     <h2>1. Information We Process</h2>
-    <p>LootPrice processes minimal data required to provide game deal lookup and recommendation services:</p>
     <ul>
-      <li><strong>Steam Profile URLs:</strong> When you provide a public Steam profile link, we resolve your public Steam ID to fetch your public game library list and playtime data.</li>
-      <li><strong>Wishlist &amp; Preferences:</strong> Your tracked wishlist items, selected currency (INR, USD, EUR), and layout choices are stored locally using Chrome's <code>chrome.storage</code> API.</li>
-      <li><strong>Custom Text Libraries:</strong> Games pasted into the Smart Text Importer are processed solely to search for matching title images and filter owned deals.</li>
+      <li><strong>Steam profile URL:</strong> If you paste a public Steam profile link, it is sent to
+      our server, which resolves it to your public Steam ID and fetches your public game list and
+      playtime via the Steam Web API. We do not store it on the server.</li>
+      <li><strong>Wishlist &amp; preferences:</strong> Tracked wishlist items, currency, region and
+      layout choices are saved with Chrome's storage API. Settings use <code>chrome.storage.sync</code>,
+      so Chrome copies them between devices signed in to your Google account. Library, wishlist and
+      profile data use <code>chrome.storage.local</code> and never leave your device except as described
+      in section 3.</li>
+      <li><strong>Text you paste into the Smart Text Importer:</strong> Sent to our server and on to
+      an AI provider to pull out game titles.</li>
+      <li><strong>Avatar images you upload:</strong> Stored locally in your browser only. Never uploaded.</li>
     </ul>
+    <p>We do not collect names, email addresses, passwords, payment details, location, or browsing
+    history. GameValue has no analytics and no advertising.</p>
 
     <h2>2. How We Use Data</h2>
-    <p>Data processed by LootPrice is used strictly to:</p>
     <ul>
-      <li>Calculate discount Buy-Scores comparing current prices to historical lows.</li>
-      <li>Hide owned games from deal suggestions when the setting is enabled.</li>
-      <li>Generate game recommendations based on your played titles.</li>
+      <li>Calculate Buy-Scores by comparing current prices to historical lows.</li>
+      <li>Hide games you already own from deal suggestions, when that setting is on.</li>
+      <li>Generate personalized recommendations from the titles you have played.</li>
+      <li>Notify you when a wishlisted game drops in price.</li>
     </ul>
 
-    <h2>3. Third-Party Services</h2>
-    <p>To deliver real-time deal pricing and library data, LootPrice communicates with the following public endpoints:</p>
+    <h2>3. Third Parties &amp; AI Processing</h2>
+    <p>GameValue talks to these services:</p>
     <ul>
-      <li><strong>Steam Web API &amp; Store API:</strong> Used to fetch public game details, prices, and library information.</li>
-      <li><strong>CheapShark API:</strong> Used for game price comparison and search data.</li>
-      <li><strong>Wishlist price alerts:</strong> When enabled, the extension checks the current Steam price of your wishlisted games roughly every six hours in the background and shows a Chrome notification if one drops. Only game IDs are sent to Steam; the check can be turned off in Settings.</li>
-      <li><strong>Backend Proxy:</strong> Secure server proxy used to interface AI recommendation endpoints without exposing API keys.</li>
+      <li><strong>Steam Store API and Steam Web API</strong> (Valve Corporation) — public game
+      details, prices and public library data. Requests carry game IDs and, when you use the
+      library feature, your public Steam ID.</li>
+      <li><strong>CheapShark API</strong> — price comparison and historical low data. Requests
+      carry game IDs and search terms only.</li>
+      <li><strong>GameValue proxy server</strong> (hosted on Render) — holds our API keys so they
+      are never shipped in the extension, and rate-limits abuse by IP. Your IP address is visible
+      to it as with any web request. We do not log or retain request contents.</li>
+      <li><strong>Groq</strong> — the AI provider behind the "Ask AI" recommendations and the Smart
+      Text Importer. When you use one of those two features, our proxy sends Groq a short list of
+      game titles and playtime hours from your library plus the current deal list, or the text you
+      pasted. No identifiers are attached: Groq does not receive your Steam ID, your profile URL,
+      your IP address, or anything that identifies you. Their handling of that data is governed by
+      <a href="https://groq.com/privacy-policy/" style="color:#FFB000">Groq's privacy policy</a>.
+      If you never use those two features, nothing is ever sent to Groq.</li>
     </ul>
+    <p><strong>Wishlist price alerts:</strong> When enabled, the extension asks Steam for the current
+    price of your wishlisted games roughly every six hours and shows a notification if one drops.
+    Only game IDs and a country code are sent. Turn it off in Settings.</p>
 
-    <h2>4. Data Storage &amp; Control</h2>
-    <p>All stored profiles and settings are maintained in your browser's local storage. You have full control over your data and can clear or remove saved profiles at any time via <strong>Settings &gt; Accounts</strong> within the extension.</p>
+    <p><strong>Uninstall feedback:</strong> If you remove GameValue, Chrome opens a farewell page
+    with an optional feedback form. It is entirely voluntary. If you choose to submit it, the reason
+    you picked and any comment you type are emailed to the developer through
+    <a href="https://formsubmit.co/" style="color:#FFB000">FormSubmit</a>. Nothing is attached to it
+    and nothing is sent if you close the page without submitting.</p>
 
-    <h2>5. Trademarks</h2>
-    <p>LootPrice is an independent project. Steam and the Steam logo are trademarks of Valve Corporation. LootPrice is not affiliated with, endorsed by, or sponsored by Valve Corporation.</p>
+    <h2>4. Data Retention &amp; Your Control</h2>
+    <p>Our server keeps nothing. It holds no database and stores no request contents; the only thing
+    it retains is a short-lived in-memory count of requests per IP for rate limiting, which is
+    discarded within 15 minutes.</p>
+    <p>Everything else lives in your browser. You can delete saved profiles at any time under
+    Settings &gt; Accounts, and removing the extension from Chrome erases all of its stored data.</p>
 
-    <h2>5. Contact &amp; Updates</h2>
-    <p>If you have any questions regarding this Privacy Policy, you can reach out via GitHub or the extension support page.</p>
+    <h2>5. Children</h2>
+    <p>GameValue is not directed at children under 13 and we do not knowingly process their data.</p>
+
+    <h2>6. Trademarks</h2>
+    <p>GameValue is an independent project. Steam and the Steam logo are trademarks of Valve
+    Corporation. GameValue is not affiliated with, endorsed by, or sponsored by Valve Corporation.</p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>If this policy changes materially, the "Last Updated" date above will change and the revised
+    policy will be posted at this URL before the change takes effect.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions or requests about your data can be raised at
+    <a href="https://github.com/Rudra-Gupta15/extension-privacy/issues" style="color:#FFB000">our GitHub issue tracker</a>,
+    or through the developer contact address listed on the extension's Chrome Web Store page.</p>
   </div>
-
 </body>
+
 </html>
