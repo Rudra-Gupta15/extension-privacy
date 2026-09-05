@@ -95,7 +95,7 @@
 <body>
     <div class="content">
         <h1>Privacy Policy</h1>
-        <div class="updated">Last updated: March 2026</div>
+        <div class="updated">Last updated: September 2026</div>
 
         <p>The <strong>BalanceTab — Gamer + Office</strong> extension is designed with privacy as a core principle. Here is how your data is handled:</p>
 
@@ -108,6 +108,7 @@
             <li><code>tabs / sessions</code>: Used to display your recently closed and open tabs within the dashboard widget.</li>
             <li><code>geolocation</code>: Used to fetch your precise location for weather data via the Open-Meteo API.</li>
             <li><code>search</code>: Used to route search queries through your browser's default search engine via the Chrome Search API. No query data is sent to the extension developer.</li>
+            <li><code>suggestqueries.google.com (host permission)</code>: As you type in the search bar, your partial query is sent to Google's public autocomplete API to show suggestions — the same mechanism Chrome's own address bar uses. This only happens while you are actively typing a search.</li>
         </ul>
 
         <h2>No Tracking</h2>
@@ -118,7 +119,9 @@
         <ul>
             <li><strong>Open-Meteo API</strong>: For real-time weather data based on your location coordinates.</li>
             <li><strong>ipinfo.io</strong>: To resolve your approximate city name for the weather display. Your IP address is sent to this service to determine your city. No personal data beyond your IP is shared.</li>
+            <li><strong>Google Search Suggestions</strong>: See above — used only while typing in the search bar.</li>
             <li><strong>Google Fonts</strong>: To provide custom typography.</li>
+            <li><strong>Favicon lookup services (Google, DuckDuckGo)</strong>: The "All AI Tools" list shows the logo of each AI site. To do this, the domain name of that fixed, built-in list of sites (e.g. <code>claude.ai</code>, <code>chatgpt.com</code>) is sent to Google's and DuckDuckGo's public favicon services. No personal data, browsing history, or information about your own shortcuts is included in these requests. Icons for your own custom shortcuts and Recent Tabs use Chrome's built-in favicon cache and never leave your device.</li>
         </ul>
 
         <h2>Contact</h2>
